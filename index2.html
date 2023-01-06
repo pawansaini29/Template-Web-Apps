@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Credit card</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    section {
+      display: flex;
+      justify-content: space-between;
+      height: 100vh;
+      align-items: center;
+      background-color: #f7f7f7;
+    }
+
+    .credit{
+      border: 1px solid  rgba(0, 0, 0, 0.3);
+      border-radius: 1rem;
+    }
+    .credit #name {
+      background-color: var(--main-color);
+      color: #ffffff;
+      font-size: 1rem !important;
+      font-weight: 500;
+      border-radius: 1.4rem;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .credit #name:hover {
+      background-color: #ffffff;
+      color: var(--main-color);
+    }
+
+    .credit:focus {
+      border-color: var(--black-400);
+    }
+  </style>
+
+</head>
+
+<body>
+  <section>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-8 col-md-6">
+          <div class="credit">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-md-6"> <span>CREDIT/DEBIT CARD PAYMENT</span> </div>
+                <div class="col-md-6 text-right" style="margin-top: -5px;"> <img src="https://img.icons8.com/color/36/000000/visa.png"> <img src="https://img.icons8.com/color/36/000000/mastercard.png"> <img
+                    src="https://img.icons8.com/color/36/000000/amex.png"> </div>
+              </div>
+            </div>
+            <form onsubmit="return mylog()">
+              <div class="card-body" style="height: 350px">
+                <div class="form-group"> <label for="cc-number" class="control-label">CARD NUMBER</label> <input id="cc-number" type="tel" class="input-lg form-control cc-number"  autocomplete="cc-number" placeholder="•••• •••• •••• ••••"
+                    required>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group"><label for="cc-exp" class="control-label">CARD EXPIRY</label><input id="cc-exp" type="tel" class="input-lg form-control cc-exp"  autocomplete="cc-exp" placeholder="•• / ••" required> </div>
+                    <span id="name"></span>
+                    <span></span>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group"> <label for="cc-cvc" class="control-label">CARD CVC</label> <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc"  autocomplete="off" placeholder="••••" required> </div>
+                  </div>
+                </div>
+                <div class="form-group"> <label for="numeric" class="control-label">CARD HOLDER NAME</label> <input  type="text" class="input-lg form-control"  placeholder="Full Name"> </div>
+                <div class="form-group"><input  value="MAKE PAYMENT" type="submit" class="btn btn-lg form-control" id="name" onclick="credit()"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="app2.js" charset="utf-8"></script>
+
+</body>
+
+</html>
