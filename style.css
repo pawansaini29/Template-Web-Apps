@@ -190,6 +190,10 @@ ul {
   text-transform: capitalize;
 }
 
+.navbar-brand span img{
+  width: 50px;
+}
+
 .navbar .nav-item {
   margin: 0.5rem;
 }
